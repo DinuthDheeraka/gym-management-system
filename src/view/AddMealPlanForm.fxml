@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="805.0" prefWidth="727.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddMealPlanFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0c0c0f" height="51.0" stroke="BLACK" strokeType="INSIDE" width="727.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0c0c0f" height="747.0" layoutY="58.0" stroke="BLACK" strokeType="INSIDE" width="727.0" />
+      <Label layoutX="14.0" layoutY="11.0" text="ADD MEAL PLAN">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#d30699" />
+                  <Stop color="#19a5ae" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <VBox layoutX="9.0" layoutY="86.0" prefHeight="471.0" prefWidth="710.0" spacing="50.0">
+         <children>
+            <JFXTextField fx:id="txtMealPlanId" focusColor="#eb04d4" labelFloat="true" onKeyReleased="#validate" promptText="Meal-Plan-Id" style="-fx-text-fill: white;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <unFocusColor>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#e10bb3" />
+                        <Stop color="#0faab5" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </unFocusColor>
+            </JFXTextField>
+            <JFXTextArea fx:id="txtMealPlanDescription" focusColor="#f200b5" labelFloat="true" onKeyReleased="#validate" promptText="Description" style="-fx-text-fill: white;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <unFocusColor>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#d30699" />
+                        <Stop color="#19a5ae" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </unFocusColor>
+            </JFXTextArea>
+         </children>
+      </VBox>
+      <JFXButton fx:id="addBtn" layoutX="594.0" layoutY="752.0" onAction="#addMealPlanAddBtnOnAction" prefHeight="39.0" prefWidth="119.0" styleClass="loginBtn" text="ADD" />
+      <JFXButton layoutX="469.0" layoutY="752.0" onAction="#addMealPlanCanselBtnOnAction" prefHeight="39.0" prefWidth="119.0" styleClass="loginFormSignUpBtn" text="CANSEL" />
+   </children>
+   <stylesheets>
+      <URL value="@../asserts/style/LoginForm.css" />
+      <URL value="@../asserts/style/Buttons.css" />
+   </stylesheets>
+</AnchorPane>

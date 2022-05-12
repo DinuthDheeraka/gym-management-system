@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="805.0" prefWidth="727.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddMemberReportFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0c0c0f" height="52.0" stroke="BLACK" strokeType="INSIDE" width="727.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0c0c0f" height="746.0" layoutY="59.0" stroke="BLACK" strokeType="INSIDE" width="727.0" />
+      <Label layoutX="14.0" layoutY="13.0" text="CREATE  FITNESS REPORT">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#da006d" />
+                  <Stop color="#12abc3" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <JFXButton fx:id="updateBtn" layoutX="599.0" layoutY="6.0" onAction="#updateBtnOnAction" prefHeight="40.0" prefWidth="122.0" styleClass="loginBtn" text="UPDATE" visible="false" />
+      <VBox layoutX="7.0" layoutY="94.0" prefHeight="486.0" prefWidth="713.0" spacing="50.0">
+         <children>
+            <JFXTextField fx:id="txtReportId" focusColor="#f50599" labelFloat="true" onKeyReleased="#validate" promptText="Report-Id">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <unFocusColor>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#e4056d" />
+                        <Stop color="#07c9ff" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </unFocusColor>
+            </JFXTextField>
+            <JFXComboBox fx:id="cmbxMemberId" focusColor="#e809b7" labelFloat="true" prefHeight="31.0" prefWidth="713.0" promptText="Select Member-Id">
+               <unFocusColor>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#e4056d" />
+                        <Stop color="#07c9ff" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </unFocusColor>
+            </JFXComboBox>
+            <JFXDatePicker fx:id="date" prefHeight="31.0" prefWidth="719.0" promptText="Select Date">
+               <defaultColor>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#e4056d" />
+                        <Stop color="#07c9ff" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </defaultColor>
+            </JFXDatePicker>
+            <JFXTextField fx:id="txtWeight" focusColor="#f50599" labelFloat="true" onKeyReleased="#validate" promptText="Weight">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <unFocusColor>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#e4056d" />
+                        <Stop color="#07c9ff" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </unFocusColor>
+            </JFXTextField>
+            <JFXTextField fx:id="txtHeight" focusColor="#f50599" labelFloat="true" onKeyReleased="#validate" promptText="Height">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <unFocusColor>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#e4056d" />
+                        <Stop color="#07c9ff" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </unFocusColor>
+            </JFXTextField>
+         </children>
+      </VBox>
+      <JFXButton fx:id="addBtn" layoutX="599.0" layoutY="758.0" onAction="#createReportBtnOnAction" prefHeight="40.0" prefWidth="122.0" styleClass="loginBtn" text="CREATE" />
+      <JFXButton layoutX="472.0" layoutY="758.0" onAction="#canselBtnOnAction" prefHeight="40.0" prefWidth="122.0" styleClass="loginFormSignUpBtn" text="CANSEL" />
+   </children>
+   <stylesheets>
+      <URL value="@../asserts/style/LoginForm.css" />
+      <URL value="@../asserts/style/Buttons.css" />
+   </stylesheets>
+</AnchorPane>

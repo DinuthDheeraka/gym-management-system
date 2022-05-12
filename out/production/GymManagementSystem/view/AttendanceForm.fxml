@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import java.net.URL?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="948.0" prefWidth="1490.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AttendanceFormController">
+   <children>
+      <JFXTabPane layoutX="-1.0" layoutY="-1.0" prefHeight="948.0" prefWidth="1490.0" stylesheets="@../asserts/style/MemberTabPane.css" tabMinWidth="740.0">
+         <tabs>
+            <Tab text="MARK ATTENDANCE">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="1490.0">
+                     <children>
+                        <ImageView fitHeight="915.0" fitWidth="1490.0" layoutX="1.0" layoutY="-2.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../asserts/man-woman-gym-check-in-social.jpg" />
+                           </image>
+                           <effect>
+                              <Lighting diffuseConstant="0.12" specularConstant="0.0">
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                        </ImageView>
+                        <AnchorPane layoutX="6.0" layoutY="6.0" prefHeight="514.0" prefWidth="1479.0" style="-fx-border-radius: 20;">
+                           <children>
+                              <TextField fx:id="txtSerachAttendanceCount" layoutX="10.0" layoutY="11.0" prefHeight="52.0" prefWidth="1232.0" promptText="Search By Year" style="-fx-background-color: null; -fx-border-color: #a02ded; -fx-border-radius: 20;" />
+                              <JFXButton layoutX="1263.0" layoutY="13.0" onAction="#getAttendanceCountToTblSearchBtnOnAction" prefHeight="49.0" prefWidth="195.0" styleClass="loginFormSignUpBtn8" text="SEARCH" />
+                              <LineChart fx:id="lineChartAttendance" horizontalGridLinesVisible="false" layoutX="2.0" layoutY="88.0" prefHeight="401.0" prefWidth="1468.0" stylesheets="@../asserts/style/Test.css" verticalGridLinesVisible="false">
+                                <xAxis>
+                                  <CategoryAxis label="MONTH" side="BOTTOM" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis label="ATTENDANCE COUNT" side="LEFT" />
+                                </yAxis>
+                              </LineChart>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="6.0" layoutY="524.0" prefHeight="382.0" prefWidth="1479.0" style="-fx-border-color: #a02ded; -fx-border-radius: 5;">
+                           <children>
+                              <JFXTextField fx:id="memberId" focusColor="#eb0b82" labelFloat="true" layoutX="38.0" layoutY="47.0" prefHeight="66.0" prefWidth="418.0" promptText="Type Member-Id" visible="false">
+                                 <unFocusColor>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop color="#ff028d" />
+                                          <Stop color="#03646b" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </unFocusColor>
+                              </JFXTextField>
+                              <JFXDatePicker fx:id="attendedDate" layoutX="477.0" layoutY="50.0" prefHeight="63.0" prefWidth="445.0" promptText="Select-Date">
+                                 <defaultColor>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop color="#d00775" />
+                                          <Stop color="#11dfee" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </defaultColor>
+                              </JFXDatePicker>
+                              <JFXTimePicker fx:id="attendedTime" layoutX="33.0" layoutY="172.0" prefHeight="69.0" prefWidth="435.0" promptText="Select Time">
+                                 <defaultColor>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop color="#e40693" />
+                                          <Stop color="#0dacd0" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </defaultColor>
+                              </JFXTimePicker>
+                              <JFXButton layoutX="478.0" layoutY="177.0" onAction="#attendanceFormMarkAttendBtnOnAction" prefHeight="64.0" prefWidth="444.0" styleClass="loginFormSignUpBtn8" text="MARK ATTENDANCE" />
+                              <Label fx:id="todayCount" layoutX="1183.0" layoutY="31.0" text="50">
+                                 <textFill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop color="#d70977" />
+                                          <Stop color="#179dae" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </textFill>
+                                 <font>
+                                    <Font name="System Bold" size="96.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="1056.0" layoutY="185.0" text="MEMBERS ATTENDS TODAY">
+                                 <textFill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop color="#d70977" />
+                                          <Stop color="#179dae" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </textFill>
+                                 <font>
+                                    <Font name="System Bold" size="29.0" />
+                                 </font>
+                              </Label>
+                              <JFXButton accessibleRole="IMAGE_VIEW" contentDisplay="CENTER" layoutX="955.0" layoutY="262.0" prefHeight="66.0" prefWidth="215.0" ripplerFill="#ff2b9f" style="-fx-background-color: black;" text="g" textOverrun="CLIP" />
+                              <JFXComboBox fx:id="memberCmbx" focusColor="#d707c5" layoutX="38.0" layoutY="82.0" prefHeight="31.0" prefWidth="401.0" promptText="Select-Member">
+                                 <unFocusColor>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop color="#c307c9" />
+                                          <Stop color="#14a8c9" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </unFocusColor>
+                              </JFXComboBox>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="SEARCH BY DATE">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #0c0c0f;">
+                     <children>
+                        <ImageView fitHeight="830.0" fitWidth="1490.0" layoutY="-1.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../asserts/man-woman-gym-check-in-social.jpg" />
+                           </image>
+                           <effect>
+                              <Lighting diffuseConstant="0.27" specularConstant="0.0">
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                        </ImageView>
+                        <TextField layoutX="7.0" layoutY="14.0" minHeight="52.0" prefHeight="52.0" prefWidth="1250.0" style="-fx-border-color: #a02ded; -fx-border-radius: 20; -fx-background-color: null;" />
+                        <JFXDatePicker fx:id="txtSearchByAttendDate" defaultColor="#b409e0" layoutX="28.0" layoutY="25.0" prefHeight="31.0" prefWidth="446.0" />
+                        <JFXButton fx:id="searchAttendanceBtn" layoutX="1270.0" layoutY="15.0" onAction="#searchAttendanceBtnOnAction" prefHeight="51.0" prefWidth="205.0" styleClass="loginFormSignUpBtn8" text="SEARCH" />
+                        <ScrollPane layoutX="8.0" layoutY="334.0" prefHeight="570.0" prefWidth="1477.0">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="557.0" prefWidth="1531.0">
+                                 <children>
+                                    <TableView fx:id="attendanceTable" prefHeight="554.0" prefWidth="1554.0">
+                                       <columns>
+                                          <TableColumn fx:id="attendanceTableColMemberId" prefWidth="150.0" text="Member-Id" />
+                                          <TableColumn fx:id="attendanceTableColName" minWidth="0.0" prefWidth="181.0" text="Name" />
+                                          <TableColumn fx:id="attendanceTableColAddress" minWidth="0.0" prefWidth="210.0" text="Address" />
+                                          <TableColumn fx:id="attendanceTableColEmail" minWidth="0.0" prefWidth="181.0" text="E-Mail" />
+                                          <TableColumn fx:id="attendanceTableColTeleNo" prefWidth="151.0" text="Tele-No" />
+                                          <TableColumn fx:id="attendanceTableColAge" minWidth="0.0" prefWidth="72.0" text="Age" />
+                                          <TableColumn fx:id="attendanceTableColJoinDate" prefWidth="152.0" text="Joined-Date" />
+                                          <TableColumn fx:id="attendanceTableScheduleId" minWidth="0.0" prefWidth="142.0" text="Schedule-Id" />
+                                          <TableColumn fx:id="attendanceTableColTrainerId" prefWidth="134.0" text="Trainer-Id" />
+                                          <TableColumn fx:id="attendanceTableColWeight" prefWidth="77.0" text="Weight" />
+                                          <TableColumn fx:id="attendanceTableColHeight" prefWidth="103.0" text="Height" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </ScrollPane>
+                        <JFXToggleButton fx:id="attendsToggleBtn" layoutX="1108.0" layoutY="55.0" text="Not Attends" textFill="#ddd5d5" toggleColor="#e407e0" toggleLineColor="#e412a5" unToggleColor="#1679c7" unToggleLineColor="#0daeda">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </JFXToggleButton>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+   </children>
+   <stylesheets>
+      <URL value="@../asserts/style/Buttons.css" />
+      <URL value="@../asserts/style/MemberTable.css" />
+   </stylesheets>
+</AnchorPane>

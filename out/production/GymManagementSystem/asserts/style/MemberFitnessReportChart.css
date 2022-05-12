@@ -1,0 +1,20 @@
+.chart-series-line{
+    -fx-stroke-width : 3px;
+}
+
+.default-color0.chart-series-line{
+    -fx-stroke:#fa3986 ;
+}
+
+.default-color1.chart-series-line{
+    -fx-stroke:#0b99d6 ;
+}
+
+.default-color0.chart-line-symbol{
+    -fx-background-color:#fa00c8, #fa4dec;
+}
+
+.chart-line-symbol{
+    -fx-pref-height: 10px;
+    -fx-pref-width: 10px;
+}

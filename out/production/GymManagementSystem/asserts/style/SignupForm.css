@@ -1,0 +1,27 @@
+.signupFormCloseBtn{
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(#f00c6a, #e32d77);
+    /*-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );*/
+}
+
+.signupFormLoginBtn {
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(
+        /*#ff0d6f*/#e01997
+            ,#ff0d6f);
+}
+
+.signupFormLoginBtn:hover {
+    -fx-background-color: #f7257d;
+    -fx-text-fill:white;
+    -fx-font-weight:bold;
+}
+
+.signupFormBackBtn{
+    /*-fx-border-color:#f00c6a;*/
+    /*-fx-background-color:black;*/
+}

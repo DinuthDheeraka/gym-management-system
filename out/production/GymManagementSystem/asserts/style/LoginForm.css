@@ -1,0 +1,67 @@
+.root{
+    -fx-background-color: rgba(0,0,0,0);
+}
+/*.loginBtn{*/
+/*    -fx-background-color: linear-gradient(#efff0d 37%,#ffa526 0%, #ff9e0d 50%);*/
+/*}*/
+
+.loginBtn {
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(
+            /*#ff0d6f*/#e01997
+            ,#ff0d6f);
+    /*-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );*/
+}
+
+.loginBtn:hover {
+    -fx-background-color: #f7257d;
+    -fx-text-fill:white;
+    -fx-font-weight:bold;
+}
+
+.loginFormCloseBtn{
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(#f00c6a, #e32d77);
+    /*-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );*/
+}
+
+/*#redline{*/
+/*    -fx-text-fill: red;*/
+/*    -fx-font-family: "Arial Narrow";*/
+/*    -fx-font-weight: bold;*/
+/*    -fx-border-color:red;*/
+/*    -fx-background-color:null;*/
+/*}*/
+
+.loginFormSignUpBtn {
+    -fx-text-fill: #f00c6a;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
+    -fx-border-color:#f00c6a;
+    /*-fx-background-color:0B0A12;*/
+}
+
+.loginFormSignUpBtn:hover {
+    -fx-background-color: #f7257d;
+    -fx-text-fill:white;
+    -fx-font-weight:bold;
+}
+
+.loginFormSignUpBtn1 {
+    -fx-text-fill: #f00c6a;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
+    -fx-border-color:#f00c6a;
+    -fx-background-color:#0c0c0f;
+}
+
+.loginFormSignUpBtn1:hover {
+    -fx-background-color: #f7257d;
+    -fx-text-fill:white;
+    -fx-font-weight:bold;
+}
+

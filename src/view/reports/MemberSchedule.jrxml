@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.19.0.final using JasperReports Library version 6.19.0-646c68931cebf1a58bc65c4359d1f0ca223c5e94  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="MemberJoiningRate" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b8901238-012e-49cb-85f8-d9e09a6827ad">
+	<parameter name="SCHEDULE NO" class="java.lang.String"/>
+	<parameter name="memberName" class="java.lang.String"/>
+	<parameter name="daysPerWeek" class="java.lang.String"/>
+	<parameter name="sDate" class="java.lang.String"/>
+	<parameter name="eDate" class="java.lang.String"/>
+	<parameter name="Trainer" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="name" class="java.lang.String"/>
+	<field name="affect" class="java.lang.String"/>
+	<field name="instructions" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="103" splitType="Stretch">
+			<staticText>
+				<reportElement x="180" y="-8" width="220" height="40" forecolor="#801DCC" uuid="3902dafe-aec9-4e7c-869d-df2b9cd59693"/>
+				<textElement>
+					<font fontName="Serif" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[360 FITNESS CENTER]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="196" y="24" width="238" height="28" uuid="0ec77252-af85-4dbe-a228-4d1fced706fa"/>
+				<textElement>
+					<font fontName="Serif" size="12"/>
+				</textElement>
+				<text><![CDATA[No 1/100,Galle Road Kalutara North]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="244" y="45" width="133" height="24" uuid="c38cace6-652e-4b31-b671-16049cf73638"/>
+				<textElement>
+					<font fontName="Serif" size="12"/>
+				</textElement>
+				<text><![CDATA[Tele - 0775906848 ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="188" y="63" width="238" height="28" uuid="7bd5c7b4-088e-494c-aeb3-09c508d3cd4b"/>
+				<textElement>
+					<font fontName="Serif" size="12"/>
+				</textElement>
+				<text><![CDATA[Email - dinuthdheeraka345@gmail.com]]></text>
+			</staticText>
+			<image>
+				<reportElement x="-17" y="-19" width="177" height="118" uuid="a1cbcfe3-4812-4bbe-b081-3db01dd61f99"/>
+				<imageExpression><![CDATA["asserts/logojpg.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="221" splitType="Stretch">
+			<textField>
+				<reportElement x="130" y="91" width="111" height="20" uuid="bcdb6e1b-b0a2-429d-b633-7318e61e4a3d"/>
+				<textElement>
+					<font fontName="Serif" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SCHEDULE NO}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="91" width="119" height="20" forecolor="#080708" uuid="4df7241a-1968-49ba-a2bf-f292411e37f3"/>
+				<textElement>
+					<font fontName="Serif" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Schedule Number   :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="42" width="119" height="19" forecolor="#080708" uuid="e66d1d6e-841d-4c3f-88fe-b780fdfac968"/>
+				<textElement>
+					<font fontName="Serif" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Member Name        :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="130" y="42" width="320" height="18" uuid="c48d1915-256c-4b4e-a272-03650be95082"/>
+				<textElement>
+					<font fontName="Serif" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{memberName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-1" y="117" width="119" height="16" forecolor="#080708" uuid="223e4be4-2cd5-4c67-9278-2ff705f9a416"/>
+				<textElement>
+					<font fontName="Serif" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Days Per Week       :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="130" y="117" width="100" height="23" uuid="2230ef50-8b61-4eaa-82b3-206a51b32c38"/>
+				<textElement>
+					<font fontName="Serif" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{daysPerWeek}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-1" y="140" width="118" height="18" forecolor="#080708" uuid="8d9a40a8-afd7-49f5-ba38-4b8a5a06f53c"/>
+				<textElement>
+					<font fontName="Serif" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Starting Date           :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="165" width="118" height="20" forecolor="#080708" uuid="ba5911bd-7533-4010-bd4e-05f3e8ab7e76"/>
+				<textElement>
+					<font fontName="Serif" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Ending Date            :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="130" y="140" width="100" height="18" uuid="cf6df1ca-2231-41be-8a0d-30ebe03b1651"/>
+				<textElement>
+					<font fontName="Serif" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="164" width="100" height="25" uuid="2a4fa9b6-e8ba-476e-b322-9fd756a012a9"/>
+				<textElement>
+					<font fontName="Serif" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{eDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-1" y="66" width="119" height="19" forecolor="#080708" uuid="640eee5e-3551-498a-8f71-2c5f87edf8cf"/>
+				<textElement>
+					<font fontName="Serif" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Trainer Name          :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="130" y="67" width="100" height="18" uuid="4bdb4ef1-0e42-49f7-adbe-848b43b79104"/>
+				<textElement>
+					<font fontName="Serif" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Trainer}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" forecolor="#971AC4" uuid="6d18d608-4cc6-42d8-80dd-58975c11d378">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3108b5e3-07e7-403e-baf7-d6bc615df0ef"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Serif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Exercise Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="0" width="100" height="20" forecolor="#971AC4" uuid="fb2effe7-7a70-4e9b-9457-58465c3ab585">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1bc22f72-65cc-46e7-95c7-a435567e8ebe"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Serif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Affecting Area]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="450" y="0" width="100" height="20" forecolor="#971AC4" uuid="65f5872d-3eed-45a9-bf77-f6d583eecfe9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="218bc832-6865-4b51-a2cf-d43252a402c9"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Serif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Instructions]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="b78f80b3-5fe1-4e47-bced-75562058076f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3108b5e3-07e7-403e-baf7-d6bc615df0ef"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Serif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="241" y="0" width="100" height="20" uuid="a1a8c9ad-ab0b-4d5a-bdfd-01f286f32fa4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1bc22f72-65cc-46e7-95c7-a435567e8ebe"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Serif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{affect}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="450" y="1" width="100" height="19" uuid="6f461846-3ef9-400c-a068-f604602c4ba5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="218bc832-6865-4b51-a2cf-d43252a402c9"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Serif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{instructions}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="60" splitType="Stretch">
+			<staticText>
+				<reportElement x="423" y="16" width="136" height="20" uuid="3b3cf50b-9310-4df4-8b12-241f762730d2">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1bc22f72-65cc-46e7-95c7-a435567e8ebe"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Serif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Created By Mr. K.Perera]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="425" y="34" width="60" height="20" uuid="0c513e4d-c0ab-4c87-b55d-55daa6f3a7b3">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1bc22f72-65cc-46e7-95c7-a435567e8ebe"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Serif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[(Manager)]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

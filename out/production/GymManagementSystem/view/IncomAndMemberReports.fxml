@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="948.0" prefWidth="1490.0" style="-fx-background-color: #0c0c0f;" stylesheets="@../asserts/style/Buttons.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.IncomAndMemberReportsControler">
+   <children>
+      <JFXTabPane prefHeight="948.0" prefWidth="1490.0" stylesheets="@../asserts/style/MemberTabPane.css" tabMinWidth="740.0">
+         <tabs>
+            <Tab text="INCOME &amp; EXPENCES REPORTS">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #0c0c0f;">
+                     <children>
+                        <ImageView fitHeight="910.0" fitWidth="1490.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../asserts/istockphoto-1064021706-1024x1024.jpg" />
+                           </image>
+                           <effect>
+                              <Lighting diffuseConstant="0.12" specularConstant="0.0">
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                        </ImageView>
+                        <TextField fx:id="txtIncomeSearch" layoutX="14.0" layoutY="18.0" prefHeight="52.0" prefWidth="1229.0" promptText="SEARCH" style="-fx-background-color: null; -fx-border-radius: 20; -fx-border-color: #a02ded; -fx-text-fill: white;">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <JFXButton buttonType="RAISED" layoutX="1254.0" layoutY="18.0" onAction="#incomeSearchBtnOnAction" prefHeight="52.0" prefWidth="225.0" styleClass="loginFormSignUpBtn8" text="SEARCH" />
+                        <LineChart fx:id="incomeChart" horizontalGridLinesVisible="false" layoutX="-3.0" layoutY="146.0" prefHeight="520.0" prefWidth="1496.0" stylesheets="@../asserts/style/MemberFitnessReportChart.css" verticalGridLinesVisible="false">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" />
+                          </yAxis>
+                        </LineChart>
+                        <Label layoutX="22.0" layoutY="97.0" text="Month -  " textFill="#b20fbd">
+                           <font>
+                              <Font name="FontAwesome Regular" size="27.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="317.0" layoutY="94.0" text="Income " textFill="#b20fbd">
+                           <font>
+                              <Font name="FontAwesome Regular" size="27.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="833.0" layoutY="97.0" text="Month -  " textFill="#db0029">
+                           <font>
+                              <Font name="FontAwesome Regular" size="27.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1117.0" layoutY="97.0" text="Expences " textFill="#db0029">
+                           <font>
+                              <Font name="FontAwesome Regular" size="27.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="30.0" layoutY="853.0" text="Total Income">
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#ab009a" />
+                                    <Stop color="#0ba7c6" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                           <font>
+                              <Font name="FontAwesome Regular" size="39.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="585.0" layoutY="853.0" text="Total Expences">
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#ab009a" />
+                                    <Stop color="#0ba7c6" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                           <font>
+                              <Font name="FontAwesome Regular" size="39.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1143.0" layoutY="853.0" text="Total Revenue">
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#ab009a" />
+                                    <Stop color="#0ba7c6" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                           <font>
+                              <Font name="FontAwesome Regular" size="39.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblIncomeMonth" layoutX="115.0" layoutY="96.0" textFill="#b20fbd">
+                           <font>
+                              <Font name="FontAwesome Regular" size="29.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblIncomeAmount" layoutX="426.0" layoutY="92.0" textFill="#b20fbd">
+                           <font>
+                              <Font name="FontAwesome Regular" size="29.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblExpensesMonth" layoutX="930.0" layoutY="96.0" textFill="#db0029">
+                           <font>
+                              <Font name="FontAwesome Regular" size="29.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblExpensesAmount" layoutX="1248.0" layoutY="96.0" textFill="#db0029">
+                           <font>
+                              <Font name="FontAwesome Regular" size="29.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblTotalIncome" layoutX="27.0" layoutY="768.0" text="LKR.10000.0">
+                           <font>
+                              <Font name="System Bold" size="47.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#ab0099" />
+                                    <Stop color="#1091bc" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                        <Label fx:id="lblTotalExpences" layoutX="578.0" layoutY="768.0" text="LKR.10000.0">
+                           <font>
+                              <Font name="System Bold" size="47.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#ab0099" />
+                                    <Stop color="#1091bc" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                        <Label fx:id="lblTotalRevenue" layoutX="1139.0" layoutY="768.0" text="LKR.10000.0">
+                           <font>
+                              <Font name="System Bold" size="47.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#ab0099" />
+                                    <Stop color="#1091bc" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                        <JFXButton buttonType="RAISED" layoutX="1141.0" layoutY="666.0" onAction="#viewReportBtnOnAction" prefHeight="52.0" prefWidth="338.0" styleClass="loginFormSignUpBtn8" text="VIEW REPORT" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="MEMBER JOINING REPORTS">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #0c0c0f;">
+                     <children>
+                        <ImageView fitHeight="912.0" fitWidth="1490.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../asserts/istockphoto-513436136-1024x1024.jpg" />
+                           </image>
+                           <effect>
+                              <Lighting diffuseConstant="0.14" specularConstant="0.0">
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                        </ImageView>
+                        <LineChart fx:id="memberCountChart" horizontalGridLinesVisible="false" layoutX="-5.0" layoutY="105.0" prefHeight="586.0" prefWidth="1498.0" stylesheets="@../asserts/style/MemberFitnessReportChart.css" verticalGridLinesVisible="false">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" />
+                          </yAxis>
+                        </LineChart>
+                        <TextField fx:id="txtCountSearch" layoutX="10.0" layoutY="16.0" prefHeight="52.0" prefWidth="1229.0" promptText="SEARCH" style="-fx-background-color: null; -fx-border-radius: 20; -fx-border-color: #a02ded; -fx-text-fill: white;">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <JFXButton buttonType="RAISED" layoutX="1256.0" layoutY="14.0" onAction="#searchCountOnAction" prefHeight="52.0" prefWidth="225.0" styleClass="loginFormSignUpBtn8" text="SEARCH" />
+                        <Label layoutX="27.0" layoutY="844.0" text="NEW MEMBERS FOR ">
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#ab009a" />
+                                    <Stop color="#0ba7c6" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                           <font>
+                              <Font name="FontAwesome Regular" size="33.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="reportYearMembers" layoutX="185.0" layoutY="704.0" text="50">
+                           <font>
+                              <Font name="System Bold" size="96.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#ab0099" />
+                                    <Stop color="#1091bc" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                        <Label fx:id="reportMonthMembers" layoutX="689.0" layoutY="704.0" text="50">
+                           <font>
+                              <Font name="System Bold" size="96.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#ab0099" />
+                                    <Stop color="#1091bc" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                        <Label layoutX="530.0" layoutY="844.0" text="NEW MEMBERS FOR THIS MONTH">
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#ab009a" />
+                                    <Stop color="#0ba7c6" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                           <font>
+                              <Font name="FontAwesome Regular" size="33.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="reportDateMembers" layoutX="1201.0" layoutY="713.0" text="50">
+                           <font>
+                              <Font name="System Bold" size="96.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#ab0099" />
+                                    <Stop color="#1091bc" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                        <Label layoutX="1088.0" layoutY="844.0" text="NEW MEMBERS TODAY">
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#ab009a" />
+                                    <Stop color="#0ba7c6" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                           <font>
+                              <Font name="FontAwesome Regular" size="33.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="txtYearName" layoutX="334.0" layoutY="844.0" prefHeight="38.0" prefWidth="108.0">
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#ab009a" />
+                                    <Stop color="#0ba7c6" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                           <font>
+                              <Font name="FontAwesome Regular" size="33.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+   </children>
+</AnchorPane>

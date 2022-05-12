@@ -1,0 +1,14 @@
+.loginFormSignUpBtn8 {
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
+    -fx-border-color:#9a2bff;
+    -fx-background-color:#9a2bff;
+}
+
+.loginFormSignUpBtn8:hover {
+    -fx-background-color:#f7257d ;
+    -fx-border-color:#f7257d;
+    -fx-text-fill:white;
+    -fx-font-weight:bold;
+}

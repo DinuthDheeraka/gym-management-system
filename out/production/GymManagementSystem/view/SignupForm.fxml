@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="signupFormContext" prefHeight="970.0" prefWidth="772.0" stylesheets="@../asserts/style/SignupForm.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SignupFormController">
+   <children>
+      <Polygon fill="#03020a" layoutX="88.0" layoutY="146.0" points="-72.0, -139.0, -72.0, 812.0, 615.0, 348.0" strokeType="INSIDE" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="78.0" AnchorPane.topAnchor="7.0">
+         <stroke>
+            <LinearGradient endX="0.7233009708737864" endY="1.0" startX="0.35436893203883496" startY="0.32038834951456313">
+               <stops>
+                  <Stop color="#f52839" />
+                  <Stop color="#0921eb" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Polygon>
+      <Polygon layoutX="465.0" layoutY="859.0" points="-147.0, -108.0, 230.0, 92.0, 230.0, -363.0" strokeType="INSIDE" AnchorPane.rightAnchor="77.0">
+         <fill>
+            <LinearGradient endX="0.7038834951456311" endY="1.0" startX="0.44660194174757284" startY="0.2912621359223301">
+               <stops>
+                  <Stop color="#900669" />
+                  <Stop color="#0ffff9" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+         <stroke>
+            <LinearGradient endX="0.7233009708737864" endY="1.0" startX="0.35436893203883496" startY="0.32038834951456313">
+               <stops>
+                  <Stop color="#f204a3" />
+                  <Stop color="#015445" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Polygon>
+      <JFXButton fx:id="signupFormCloseBtn" layoutX="17.0" layoutY="55.0" onAction="#signupFormCloseBtnOnAction" prefHeight="41.0" prefWidth="40.0" styleClass="signupFormCloseBtn" text="x" />
+      <JFXButton fx:id="signupFormMinBtn" layoutX="17.0" layoutY="100.0" onAction="#signupFormMinBtnOnAction" prefHeight="41.0" prefWidth="40.0" style="-fx-background-color: #111317;" text="-" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="21.0" layoutY="160.0" text="360" AnchorPane.leftAnchor="21.0" AnchorPane.topAnchor="168.0">
+         <font>
+            <Font name="Arial" size="69.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#ff0062" />
+                  <Stop color="#ca00ff" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Circle fx:id="circle2" layoutX="137.0" layoutY="174.0" radius="5.0" stroke="#ff1ef7" strokeType="INSIDE" strokeWidth="3.0" AnchorPane.leftAnchor="132.0" AnchorPane.topAnchor="169.0" />
+      <Label layoutX="25.0" layoutY="248.0" text="FITNESS CLUB" AnchorPane.bottomAnchor="702.0" AnchorPane.leftAnchor="24.0">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#ff0062" />
+                  <Stop color="#ca00ff" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <ImageView fitHeight="173.0" fitWidth="200.0" layoutX="-62.0" layoutY="339.0">
+         <image>
+            <Image url="@../asserts/email.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="signupFormLoginBtn" buttonType="RAISED" layoutX="17.0" layoutY="650.0" onAction="#signUpBtnOnAction" prefHeight="49.0" prefWidth="354.0" styleClass="signupFormLoginBtn" text="LOGIN" AnchorPane.bottomAnchor="290.0" AnchorPane.leftAnchor="27.0" />
+      <JFXTextField fx:id="txtUserName" focusColor="#f801bb" labelFloat="true" layoutX="94.0" layoutY="401.0" onKeyReleased="#validate" prefHeight="31.0" prefWidth="322.0" promptText="Username" style="-fx-text-fill: white;" unFocusColor="WHITE" AnchorPane.bottomAnchor="613.0" AnchorPane.leftAnchor="58.0">
+         <font>
+            <Font size="17.0" />
+         </font></JFXTextField>
+      <JFXPasswordField fx:id="txtPassword" focusColor="#ff0d8e" labelFloat="true" layoutX="58.0" layoutY="508.0" onKeyReleased="#validate" prefHeight="31.0" prefWidth="322.0" promptText="Password" style="-fx-text-fill: white;" unFocusColor="WHITE" AnchorPane.bottomAnchor="457.0" AnchorPane.leftAnchor="58.0">
+         <font>
+            <Font size="17.0" />
+         </font></JFXPasswordField>
+      <JFXTextField fx:id="txtEmail" focusColor="#f801bb" labelFloat="true" layoutX="68.0" layoutY="398.0" onKeyReleased="#validate" prefHeight="31.0" prefWidth="322.0" promptText="E-mail" style="-fx-text-fill: white;" unFocusColor="WHITE" AnchorPane.bottomAnchor="535.0" AnchorPane.leftAnchor="60.0">
+         <font>
+            <Font size="17.0" />
+         </font></JFXTextField>
+      <ImageView fitHeight="173.0" fitWidth="177.0" layoutX="492.0" layoutY="616.0" AnchorPane.leftAnchor="508.0" AnchorPane.topAnchor="621.0">
+         <image>
+            <Image url="@../asserts/admin.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="528.0" layoutY="803.0" text="SIGNUP" textFill="WHITE" AnchorPane.bottomAnchor="126.0" AnchorPane.leftAnchor="532.0">
+         <font>
+            <Font name="System Bold" size="37.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="214.0" fitWidth="223.0" layoutX="-72.0" layoutY="394.0">
+         <image>
+            <Image url="@../asserts/padlock%20(1).png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="408.0" fitWidth="423.0" layoutX="-175.0" layoutY="143.0">
+         <image>
+            <Image url="@../asserts/user.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="signupFormBackBtn" buttonType="RAISED" layoutX="-3.0" layoutY="844.0" onAction="#signupFormBackBtnOnAction" prefHeight="82.0" prefWidth="0.0" styleClass="signupFormBackBtn" text="&lt;">
+         <font>
+            <Font name="System Bold" size="39.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.7233009708737864" endY="1.0" startX="0.35436893203883496" startY="0.32038834951456313">
+               <stops>
+                  <Stop color="#f204a3" />
+                  <Stop color="#f204a3" offset="0.007246376811594203" />
+                  <Stop color="#0f6eff" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </JFXButton>
+      <ImageView fx:id="showPasswordIcon" fitHeight="192.0" fitWidth="237.0" layoutX="245.0" layoutY="392.0" onMouseClicked="#showPasswordOnClick" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/hidden%20(7).png" />
+         </image>
+      </ImageView>
+      <Label layoutX="27.0" layoutY="759.0" text="SYSTEM VERSION 1.0" />
+      <ImageView fx:id="hidePasswordIcon" fitHeight="113.0" fitWidth="138.0" layoutX="295.0" layoutY="431.0" onMouseClicked="#hidePasswordOnClick" pickOnBounds="true" visible="false">
+         <image>
+            <Image url="@../asserts/hidden%20(12).png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtTempPassword" focusColor="#e41286" layoutX="58.0" layoutY="481.0" prefHeight="31.0" prefWidth="322.0" unFocusColor="#ffebeb" visible="false">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </JFXTextField>
+      <Label fx:id="passwarningLbl11" layoutX="57.0" layoutY="523.0" text="* Password Already Exists!" textFill="#f00c0c" visible="false">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

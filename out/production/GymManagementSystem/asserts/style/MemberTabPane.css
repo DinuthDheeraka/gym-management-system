@@ -1,0 +1,9 @@
+.tab-header-background{
+    -fx-background-color:  #03020a;
+}
+.textPane{
+    -fx-background-color: white;
+    -fx-border-color:  #f7257d;
+    -fx-border-radius: 8px;
+}
+

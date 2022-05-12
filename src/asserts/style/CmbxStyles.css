@@ -1,0 +1,11 @@
+.jfx-combo-box .list-cell{ /*for selected items*/
+    -fx-text-fill: WHITE;
+}
+
+.jfx-combo-box .list-view .list-cell{  /*for selected Drop items*/
+    -fx-text-fill: BLACK;
+
+}
+
+
+

@@ -1,0 +1,27 @@
+.jfx-hamburger StackPane {
+    -fx-background-color:#c90c8d;
+}
+.root{
+    -fx-background-color: rgba(0,0,0,0);
+}
+.loginFormSignUpBtn {
+    -fx-text-fill: #f00c6a;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
+    -fx-border-color:#f00c6a;
+    -fx-background-color: #0c0c0f;
+}
+
+.loginFormSignUpBtn:hover {
+    -fx-background-color: #f7257d;
+    -fx-text-fill:white;
+    -fx-font-weight:bold;
+}
+
+.manageMemberBtn:hover {
+    -fx-border-color:#f00c6a;
+    -fx-text-fill:white;
+    -fx-font-weight:bold;
+    -fx-background-color:#202021 ;
+    -fx-border-width: 0px 0px 0px 6px;
+}

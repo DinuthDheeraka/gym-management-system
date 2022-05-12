@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="805.0" prefWidth="727.0" stylesheets="@../asserts/style/LoginForm.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddScheduleFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0c0c0f" height="51.0" stroke="BLACK" strokeType="INSIDE" width="727.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0c0c0f" height="744.0" layoutY="61.0" stroke="BLACK" strokeType="INSIDE" width="727.0" />
+      <Label fx:id="addScheduleTitle" layoutX="14.0" layoutY="15.0" text="ADD SCHEDULE">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#e40e75" />
+                  <Stop color="#088af5" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <VBox layoutX="14.0" layoutY="88.0" prefHeight="218.0" prefWidth="705.0" spacing="40.0">
+         <children>
+            <JFXTextField fx:id="txtScheduleId" focusColor="#dd096c" labelFloat="true" onKeyReleased="#validate" promptText="Schedule-Id" style="-fx-text-fill: white;">
+               <unFocusColor>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#e410af" />
+                        <Stop color="#0f76b5" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </unFocusColor>
+               <font>
+                  <Font size="18.0" />
+               </font></JFXTextField>
+            <JFXTextField fx:id="txtScheduleDPW" focusColor="#dd096c" labelFloat="true" layoutX="10.0" layoutY="72.0" onKeyReleased="#validate" promptText="Days-Per-Week" style="-fx-text-fill: white;">
+               <unFocusColor>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#e410af" />
+                        <Stop color="#0f76b5" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </unFocusColor>
+               <font>
+                  <Font size="18.0" />
+               </font></JFXTextField>
+            <JFXDatePicker fx:id="txtScheduleStartDate" prefHeight="31.0" prefWidth="718.0" promptText="Start Date">
+               <defaultColor>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#f21289" />
+                        <Stop color="#4707a1" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </defaultColor>
+            </JFXDatePicker>
+            <JFXDatePicker fx:id="txtScheduleEndDate" prefHeight="31.0" prefWidth="848.0" promptText="End Date">
+               <defaultColor>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#f21289" />
+                        <Stop color="#6d0bf5" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </defaultColor>
+            </JFXDatePicker>
+         </children>
+      </VBox>
+      <JFXButton layoutX="392.0" layoutY="732.0" onAction="#addScheduleCanselBtnOnAction" prefHeight="51.0" prefWidth="160.0" styleClass="loginFormSignUpBtn" text="CANSEL" />
+      <JFXButton fx:id="addScheduleAddBtn" layoutX="558.0" layoutY="732.0" onAction="#addScheduleAddBtnOnAction" prefHeight="51.0" prefWidth="160.0" styleClass="loginBtn" text="ADD" />
+      <VBox layoutX="14.0" layoutY="444.0" prefHeight="77.0" prefWidth="705.0">
+         <children>
+            <VBox prefHeight="77.0" prefWidth="705.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="13.0">
+                     <children>
+                        <JFXComboBox fx:id="cmbxAssignTrainer" focusColor="#da0693" labelFloat="true" prefHeight="31.0" prefWidth="339.0" promptText="Assign Trainer">
+                           <unFocusColor>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#d7127e" />
+                                    <Stop color="#16aeff" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </unFocusColor></JFXComboBox>
+                        <JFXComboBox fx:id="cmbxAssignMealPlan" focusColor="#da0693" labelFloat="true" layoutX="10.0" layoutY="10.0" prefHeight="31.0" prefWidth="354.0" promptText="Assign Meal Plan">
+                           <unFocusColor>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#f21289" />
+                                    <Stop color="#0e8b9e" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </unFocusColor></JFXComboBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <JFXButton fx:id="addScheduleUpdateBtn" buttonType="RAISED" layoutX="606.0" layoutY="10.0" onAction="#addScheduleUpdateBtnOnAction" prefHeight="31.0" prefWidth="115.0" styleClass="loginBtn" text="UPDATE" />
+   </children>
+</AnchorPane>

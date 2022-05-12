@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="805.0" prefWidth="727.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddEqipmentFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0c0c0f" height="55.0" stroke="BLACK" strokeType="INSIDE" width="727.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0c0c0f" height="741.0" layoutY="64.0" stroke="BLACK" strokeType="INSIDE" width="727.0" />
+      <Label layoutX="14.0" layoutY="12.0" text="UPDATE EQUIPMENT">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#ff00b2" />
+                  <Stop color="#0799c9" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <VBox layoutX="11.0" layoutY="89.0" prefHeight="398.0" prefWidth="707.0" spacing="45.0">
+         <children>
+            <JFXTextField fx:id="txtEqId" focusColor="#ee0d89" labelFloat="true" onKeyReleased="#validate" promptText="Equipment-Id" style="-fx-text-fill: white;">
+               <unFocusColor>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#ff00b2" />
+                        <Stop color="#0799c9" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </unFocusColor>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtEqType" focusColor="#ee0d89" labelFloat="true" layoutX="10.0" layoutY="10.0" onKeyReleased="#validate" promptText="Type" style="-fx-text-fill: white;">
+               <unFocusColor>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#ff00b2" />
+                        <Stop color="#0799c9" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </unFocusColor>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtEqDesc" focusColor="#ee0d89" labelFloat="true" layoutX="10.0" layoutY="41.0" onKeyReleased="#validate" promptText="Description" style="-fx-text-fill: white;">
+               <unFocusColor>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#ff00b2" />
+                        <Stop color="#0799c9" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </unFocusColor>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtEqQOH" focusColor="#ee0d89" labelFloat="true" layoutX="10.0" layoutY="259.0" onKeyReleased="#validate" promptText="QOH" style="-fx-text-fill: white;">
+               <unFocusColor>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#ff00b2" />
+                        <Stop color="#0799c9" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </unFocusColor>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </VBox>
+      <JFXButton layoutX="431.0" layoutY="744.0" onAction="#addEquipmentCanselBtnOnAction" prefHeight="47.0" prefWidth="137.0" styleClass="loginFormSignUpBtn" text="CANSEL" />
+      <JFXButton fx:id="updatebtn" layoutX="576.0" layoutY="744.0" onAction="#updateBtnOnAction" prefHeight="47.0" prefWidth="137.0" styleClass="loginBtn" text="UPDATE" />
+   </children>
+   <stylesheets>
+      <URL value="@../asserts/style/LoginForm.css" />
+      <URL value="@../asserts/style/Buttons.css" />
+   </stylesheets>
+</AnchorPane>

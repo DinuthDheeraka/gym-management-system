@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import java.net.URL?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="948.0" prefWidth="1490.0" style="-fx-background-color: #0c0c0f;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManagePayementFormController">
+   <children>
+      <JFXTabPane prefHeight="948.0" prefWidth="1490.0" stylesheets="@../asserts/style/MemberTabPane.css" tabMinWidth="493.0">
+         <tabs>
+            <Tab text="MEMBER'S MONTHLY PAYEMENTS">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="1499.0" style="-fx-background-color: #0c0c0f;">
+                     <children>
+                        <ImageView fitHeight="910.0" fitWidth="1490.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../asserts/istockphoto-1064021706-1024x1024.jpg" />
+                           </image>
+                           <effect>
+                              <Lighting diffuseConstant="0.1" specularConstant="0.0">
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                        </ImageView>
+                        <LineChart fx:id="incomeFromMembersChart" horizontalGridLinesVisible="false" layoutY="71.0" prefHeight="435.0" prefWidth="1496.0" stylesheets="@../asserts/style/Test.css" verticalGridLinesVisible="false">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" />
+                          </yAxis>
+                        </LineChart>
+                        <TextField fx:id="txtSearchInComeBar" layoutX="9.0" layoutY="19.0" minHeight="52.0" prefHeight="52.0" prefWidth="1245.0" promptText="SEARCH" style="-fx-background-color: null; -fx-border-radius: 20; -fx-border-color: #a02ded; -fx-text-fill: white;">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <JFXButton layoutX="1265.0" layoutY="20.0" onAction="#txtSearchInComeBtnOnAction" prefHeight="50.0" prefWidth="215.0" styleClass="loginFormSignUpBtn8" text="SEARCH" />
+                        <AnchorPane layoutX="6.0" layoutY="514.0" prefHeight="389.0" prefWidth="1477.0" style="-fx-border-color: #a02ded; -fx-border-radius: 10;">
+                           <children>
+                              <JFXTextField fx:id="txtPayementId" focusColor="#e10590" labelFloat="true" layoutX="21.0" layoutY="23.0" prefHeight="45.0" prefWidth="469.0" promptText="Payement_Id" style="-fx-prompt-text-fill: white; -fx-text-fill: white;">
+                                 <unFocusColor>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop color="#ff0894" />
+                                          <Stop color="#14a9e4" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </unFocusColor>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="txtPayingMonth" focusColor="#e10aa8" labelFloat="true" layoutX="1001.0" layoutY="21.0" onKeyReleased="#validate" prefHeight="47.0" prefWidth="463.0" promptText="Paying For(Month)" style="-fx-prompt-text-fill: white;">
+                                 <unFocusColor>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop color="#ff0894" />
+                                          <Stop color="#14a9e4" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </unFocusColor>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXDatePicker fx:id="txtPaidDate" layoutX="21.0" layoutY="119.0" prefHeight="31.0" prefWidth="475.0" promptText="Select Date">
+                                 <defaultColor>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop color="#ff0894" />
+                                          <Stop color="#14a9e4" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </defaultColor>
+                              </JFXDatePicker>
+                              <JFXTimePicker fx:id="txtPaidTime" layoutX="519.0" layoutY="119.0" prefHeight="31.0" prefWidth="462.0" promptText="Select Time">
+                                 <defaultColor>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop color="#ff0894" />
+                                          <Stop color="#14a9e4" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </defaultColor>
+                              </JFXTimePicker>
+                              <JFXTextField fx:id="txtPaidAmount" focusColor="#e405a9" labelFloat="true" layoutX="1001.0" layoutY="112.0" onKeyReleased="#validate" prefHeight="31.0" prefWidth="462.0" promptText="Select Amount" style="-fx-prompt-text-fill: white;">
+                                 <unFocusColor>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop color="#e4068f" />
+                                          <Stop color="#0ab0da" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </unFocusColor>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXComboBox fx:id="cmbxMemberList" focusColor="#e10cb6" labelFloat="true" layoutX="521.0" layoutY="37.0" prefHeight="31.0" prefWidth="450.0" promptText="Select Member" style="-fx-prompt-text-fill: white;">
+                                 <unFocusColor>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop color="#e4068f" />
+                                          <Stop color="#0ab0da" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </unFocusColor>
+                              </JFXComboBox>
+                              <Label fx:id="lblTotalMembersSettled" layoutX="8.0" layoutY="240.0" text="10 Members">
+                                 <font>
+                                    <Font name="FontAwesome Regular" size="68.0" />
+                                 </font>
+                                 <textFill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop color="#f2099c" />
+                                          <Stop color="#0ab0da" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </textFill>
+                              </Label>
+                              <Label layoutX="13.0" layoutY="335.0" text="Settled Payements Today">
+                                 <font>
+                                    <Font name="FontAwesome Regular" size="31.0" />
+                                 </font>
+                                 <textFill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop color="#f2099c" />
+                                          <Stop color="#0ab0da" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </textFill>
+                              </Label>
+                              <Label fx:id="lbltodayIncome" layoutX="554.0" layoutY="242.0" text="LKR.10000">
+                                 <font>
+                                    <Font name="FontAwesome Regular" size="68.0" />
+                                 </font>
+                                 <textFill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop color="#f2099c" />
+                                          <Stop color="#0ab0da" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </textFill>
+                              </Label>
+                              <Label layoutX="558.0" layoutY="334.0" text="Today Income from Members">
+                                 <font>
+                                    <Font name="FontAwesome Regular" size="31.0" />
+                                 </font>
+                                 <textFill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop color="#f2099c" />
+                                          <Stop color="#0ab0da" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </textFill>
+                              </Label>
+                              <Label fx:id="lblLastMonthUnPaid" layoutX="1050.0" layoutY="240.0" text="10 Members">
+                                 <font>
+                                    <Font name="FontAwesome Regular" size="68.0" />
+                                 </font>
+                                 <textFill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop color="#f2099c" />
+                                          <Stop color="#0ab0da" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </textFill>
+                              </Label>
+                              <Label layoutX="1060.0" layoutY="325.0" text="Haven't Paid For Last Month">
+                                 <font>
+                                    <Font name="FontAwesome Regular" size="31.0" />
+                                 </font>
+                                 <textFill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop color="#f2099c" />
+                                          <Stop color="#0ab0da" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </textFill>
+                              </Label>
+                              <JFXButton fx:id="payBtn" layoutX="1002.0" layoutY="177.0" onAction="#markAsPaidBtnOnAction" prefHeight="50.0" prefWidth="462.0" styleClass="loginFormSignUpBtn8" text="MARK AS PAID" />
+                           </children>
+                        </AnchorPane>
+                        <JFXButton layoutX="1267.0" layoutY="459.0" onAction="#vireIncomeReport" prefHeight="50.0" prefWidth="215.0" styleClass="loginFormSignUpBtn8" text="VIEW REPORTS" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="MEMBER'S PAYEMENT HISTORY">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #0c0c0f;">
+                     <children>
+                        <ImageView fitHeight="910.0" fitWidth="1490.0" layoutY="1.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../asserts/istockphoto-1064021706-1024x1024.jpg" />
+                           </image>
+                           <effect>
+                              <Lighting diffuseConstant="0.15" specularConstant="0.0">
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                        </ImageView>
+                        <TextField fx:id="txtMemberPayementSearchBar" layoutX="8.0" layoutY="21.0" minHeight="52.0" onAction="#txtMemberPayementSearchBarOnAction" prefHeight="52.0" prefWidth="1227.0" promptText="SEARCH" style="-fx-background-color: null; -fx-border-color: #a02ded; -fx-border-radius: 20; -fx-text-fill: white;">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <JFXButton fx:id="memberPayementSearchBtn" layoutX="1254.0" layoutY="22.0" minHeight="52.0" onAction="#memberPayementSearchBtnOnAction" prefHeight="52.0" prefWidth="225.0" styleClass="loginFormSignUpBtn8" text="SEARCH" />
+                        <TableView fx:id="memberPayementTbl" layoutX="10.0" layoutY="300.0" prefHeight="605.0" prefWidth="1474.0">
+                          <columns>
+                            <TableColumn fx:id="memberPayementTblPId" prefWidth="75.0" text="Payement-Id" />
+                            <TableColumn fx:id="memberPayementTblSDate" prefWidth="75.0" text="Settled Date" />
+                              <TableColumn fx:id="memberPayementTblSTime" prefWidth="75.0" text="Settled Time" />
+                              <TableColumn fx:id="memberPayementTblMonth" prefWidth="75.0" text="Paid For(Month)" />
+                              <TableColumn fx:id="memberPayementTblAmount" prefWidth="75.0" text="Paid Amount" />
+                              <TableColumn fx:id="memberPayementTblMId" prefWidth="75.0" text="Member-Id" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                           <contextMenu>
+                              <ContextMenu>
+                                <items>
+                                  <MenuItem mnemonicParsing="false" onAction="#payementHIstoryRefreshCtmOnAction" text="Refresh" />
+                                </items>
+                              </ContextMenu>
+                           </contextMenu>
+                        </TableView>
+                        <JFXToggleButton fx:id="toggleMemberId" layoutX="999.0" layoutY="68.0" text="Search By Member-Id" textFill="#ddd1d1" toggleColor="#de03ff" toggleLineColor="#e112cc" unToggleColor="#8a8a8a" unToggleLineColor="#dacece">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="www" />
+                           </toggleGroup>
+                        </JFXToggleButton>
+                        <JFXToggleButton fx:id="toggleDate" layoutX="807.0" layoutY="68.0" text="Search By Date" textFill="#ddd1d1" toggleColor="#de03ff" toggleGroup="$www" toggleLineColor="#e40c95" unToggleColor="#696575" unToggleLineColor="#f5e6f0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </JFXToggleButton>
+                        <JFXToggleButton fx:id="toggleMonth" layoutX="619.0" layoutY="68.0" selected="true" text="Search By Month" textFill="#ddd1d1" toggleColor="#de03ff" toggleGroup="$www" toggleLineColor="#e40c95" unToggleColor="#696575" unToggleLineColor="#f5e6f0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </JFXToggleButton>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="SEARCH PAID/UNPAID MEMBERS">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="911.0" fitWidth="1490.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../asserts/istockphoto-1064021706-1024x1024.jpg" />
+                           </image>
+                           <effect>
+                              <Lighting diffuseConstant="0.13" specularConstant="0.0">
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                        </ImageView>
+                        <TextField fx:id="txtMemberPayementcStatusSearchBar" layoutX="9.0" layoutY="20.0" minHeight="52.0" prefHeight="52.0" prefWidth="1226.0" promptText="SEARCH" style="-fx-background-color: null; -fx-border-color: #a02ded; -fx-border-radius: 20; -fx-text-fill: white;">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <JFXButton layoutX="1247.0" layoutY="20.0" minHeight="52.0" onAction="#memberPayementStatusSearchBtnOnAction" prefHeight="52.0" prefWidth="230.0" styleClass="loginFormSignUpBtn8" text="SEARCH" />
+                        <TableView fx:id="memberPayementStatusTbl" layoutX="6.0" layoutY="296.0" prefHeight="608.0" prefWidth="1477.0">
+                          <columns>
+                            <TableColumn fx:id="memberPayementStatusTblMId" prefWidth="75.0" text="Member-Id" />
+                            <TableColumn fx:id="memberPayementStatusTblMName" prefWidth="75.0" text="Name" />
+                              <TableColumn fx:id="memberPayementStatusTblMmail" prefWidth="75.0" text="E-mail" />
+                              <TableColumn fx:id="memberPayementStatusTblMAddress" prefWidth="75.0" text="Address" />
+                              <TableColumn fx:id="memberPayementStatusTblMTele" prefWidth="75.0" text="Tele-No" />
+                              <TableColumn fx:id="memberPayementStatusTblMJDate" prefWidth="75.0" text="Join-Date" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <JFXToggleButton fx:id="unpaidMemberToggle" layoutX="1043.0" layoutY="78.0" text="Unpaid Members" textFill="#d7cdcd" toggleColor="#a006ae" toggleLineColor="#c3079a">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </JFXToggleButton>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+   </children>
+   <stylesheets>
+      <URL value="@../asserts/style/Buttons.css" />
+      <URL value="@../asserts/style/MemberTable.css" />
+      <URL value="@../asserts/style/CmbxStyles.css" />
+   </stylesheets>
+</AnchorPane>
